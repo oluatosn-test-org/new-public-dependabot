@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/elgohr/private-dependency/hello"
+	"github.com/oluatosn-test-org/private-dependency/hello"
 	"log"
 )
 
