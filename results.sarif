@@ -1,0 +1,53 @@
+{
+    "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+    "version": "2.1.0",
+    "runs": [
+        {
+            "tool": {
+                "driver": {
+                    "name": "Prisma Cloud (twistcli)",
+                    "version": "31.03.103",
+                    "rules": [
+                        {
+                            "id": "CVE-2023-2976",
+                            "shortDescription": {
+                                "text": "[Prisma Cloud] CVE-2023-2976 in com.google.guava_guava (high)"
+                            },
+                            "fullDescription": {
+                                "text": "High severity CVE-2023-2976 found in com.google.guava_guava version 31.1-jre"
+                            },
+                            "help": {
+                                "text": "",
+                                "markdown": "| CVE | Severity | CVSS | Package | Version | Fix Status | Published | Discovered |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| [CVE-2023-2976](https://nvd.nist.gov/vuln/detail/CVE-2023-2976) | high | 7.1 | com.google.guava_guava | 31.1-jre | fixed in 32.0.0 | 2023-06-14T18:15:00Z | 2023-11-14T12:34:19Z |"
+                            }
+                        }
+                    ]
+                }
+            },
+            "results": [
+                {
+                    "ruleId": "CVE-2023-2976",
+                    "level": "warning",
+                    "message": {
+                        "text": "Description:\nUse of Java\\'s default temporary directory for file creation in `FileBackedOutputStream` in Google Guava versions 1.0 to 31.1 on Unix systems and Android Ice Cream Sandwich allows other users and apps on the machine with access to the default Java temporary directory to be able to access the files created by the class.  Even though the security vulnerability is fixed in version 32.0.0, we recommend using version 32.0.1 as version 32.0.0 breaks some functionality under Windows.  "
+                    },
+                    "locations": [
+                        {
+                            "physicalLocation": {
+                                "artifactLocation": {
+                                    "uri": "maersk-global/sbd_test_container_image_scanning:v6863586884"
+                                },
+                                "region": {
+                                    "startLine": 1,
+                                    "startColumn": 1,
+                                    "endLine": 1,
+                                    "endColumn": 1
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
